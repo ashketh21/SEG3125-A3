@@ -13,9 +13,9 @@ const GameMenu = ({ onStartGame }) => {
   ];
 
   const themeOptions = [
-    { value: 'dungeon', label: 'Dungeon', desc: 'Stone walls' },
-    { value: 'forest', label: 'Forest', desc: 'Green hedges' },
-    { value: 'scifi', label: 'Sci-Fi', desc: 'Blue corridors' }
+    { value: 'dungeon', label: 'Lone Dungeon', desc: 'Stone walls' },
+    { value: 'forest', label: 'Lush Forest', desc: 'Green hedges' },
+    { value: 'scifi', label: 'Futuristic', desc: 'Blue corridors' }
   ];
 
   const getPreviewTime = () => {
@@ -54,9 +54,9 @@ const GameMenu = ({ onStartGame }) => {
       <div className="max-w-2xl w-full bg-white rounded-lg shadow-lg p-8">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-800 mb-2">MazeMemo</h1>
-          <p className="text-gray-600">Spatial Memory Challenge</p>
+          <p className="text-gray-600">Welcome To The Best Spatial Memory Challenge</p>
           <p className="text-sm text-gray-500 mt-2">
-            Memorize the maze, then navigate with transparent walls!
+            Memorize the maze, then navigate, do not hit the transparent walls!
           </p>
         </div>
 
@@ -149,7 +149,7 @@ const GameMenu = ({ onStartGame }) => {
               {hintsEnabled ? 'Enabled' : 'Disabled'}
             </button>
             <p className="text-sm text-gray-500 mt-1">
-              Show last 3 moves as breadcrumbs
+              Show your last 3 moves as breadcrumbs
             </p>
           </div>
         </div>
@@ -160,7 +160,7 @@ const GameMenu = ({ onStartGame }) => {
             onClick={handleStartGame}
             className="bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors"
           >
-            Start Challenge
+            Start The Challenge
           </button>
         </div>
       </div>

@@ -504,7 +504,7 @@ const MazeGame = ({ config, onGameComplete, onReturnToMenu }) => {
                 </div>
               )}
               {config.hintsEnabled && (
-                <span className="text-sm text-gray-600">Hints ON</span>
+                <span className="text-sm text-gray-600">Hints are ON</span>
               )}
             </div>
           </div>
@@ -513,7 +513,7 @@ const MazeGame = ({ config, onGameComplete, onReturnToMenu }) => {
         {/* Game Status */}
         {gameState === 'preview' && (
           <div className="bg-blue-500 text-white p-4 rounded-lg mb-6 text-center">
-            <h2 className="text-xl font-bold mb-2">Memorize the Maze!</h2>
+            <h2 className="text-xl font-bold mb-2">Quick, Memorize the Maze!</h2>
             <p>Time remaining: {previewTimeLeft} seconds</p>
           </div>
         )}
@@ -543,7 +543,7 @@ const MazeGame = ({ config, onGameComplete, onReturnToMenu }) => {
           {/* Controls */}
           <div className="w-full lg:w-80">
             <div className="bg-white rounded-lg p-6">
-              <h3 className="text-xl font-bold mb-4">Controls</h3>
+              <h3 className="text-xl font-bold mb-4">Game Controls</h3>
               
               <div className="grid grid-cols-3 gap-2 mb-6">
                 <div></div>
@@ -584,13 +584,13 @@ const MazeGame = ({ config, onGameComplete, onReturnToMenu }) => {
               </div>
 
               <p className="text-sm text-gray-600 mb-4">
-                Use arrow keys or WASD to move
+                Use your arrow keys or W-A-S-D to move
               </p>
 
               <div className="space-y-2 text-sm">
                 <div className="flex items-center gap-2">
                   <div className={`w-4 h-4 ${themeStyles.start} rounded`}></div>
-                  <span>Start Position</span>
+                  <span>Starting Position</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className={`w-4 h-4 ${themeStyles.end} rounded`}></div>

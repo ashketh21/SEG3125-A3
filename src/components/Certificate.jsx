@@ -53,7 +53,7 @@ Congratulations on your spatial memory mastery!
   };
 
   const shareCertificate = () => {
-    const shareText = `🏆 I just completed MazeMemo on ${difficulty} difficulty in ${formatTime(stats.timeElapsed)}! Can you beat my spatial memory skills? 🧠✨`;
+    const shareText = `🏆 I just completed MazeMemo on ${difficulty} difficulty in ${formatTime(stats.timeElapsed)}! Can you match my aura, skills and big brain energy? 🧠✨`;
     
     if (navigator.share) {
       navigator.share({
@@ -101,11 +101,11 @@ Congratulations on your spatial memory mastery!
             </p>
           </div>
           <div className="bg-white rounded-lg p-3">
-            <p className="text-gray-600">Completion Time</p>
+            <p className="text-gray-600">Total Completion Time</p>
             <p className="font-bold text-lg text-blue-600">{formatTime(stats.timeElapsed)}</p>
           </div>
           <div className="bg-white rounded-lg p-3">
-            <p className="text-gray-600">Total Moves</p>
+            <p className="text-gray-600">Total Moves Made</p>
             <p className="font-bold text-lg text-green-600">{stats.moves}</p>
           </div>
         </div>
@@ -113,7 +113,7 @@ Congratulations on your spatial memory mastery!
 
       <div className="mb-6">
         <p className="text-sm text-gray-500">
-          Awarded on {new Date().toLocaleDateString()} • MazeMemo Champion
+          Awarded on {new Date().toLocaleDateString()} • MazeMemo Winner Winner Chicken Dinner
         </p>
       </div>
 
@@ -128,7 +128,7 @@ Congratulations on your spatial memory mastery!
           onClick={shareCertificate}
           className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors"
         >
-          Share Achievement
+          Share Certificate
         </button>
       </div>
     </div>

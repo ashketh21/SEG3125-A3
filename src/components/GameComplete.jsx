@@ -39,7 +39,7 @@ const GameComplete = ({ stats, difficulty, theme, onPlayAgain, onReturnToMenu })
             </div>
             <h1 className="text-4xl font-bold text-gray-800 mb-4">Time's Up!</h1>
             <p className="text-xl text-gray-600 mb-6">
-              Don't worry - even the best maze runners need practice!
+              Don't beat yourself - even the best maze runners need practice!
             </p>
           </div>
 
