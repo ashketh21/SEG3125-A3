@@ -27,7 +27,7 @@ const Certificate = ({ stats, difficulty, theme, playerName = "Player" }) => {
 
   const downloadCertificate = () => {
     const certificateText = `
-🏆 MAZEMEMORY CHAMPION CERTIFICATE 🏆
+ MAZEMEMORY CHAMPION CERTIFICATE 
 
 This certifies that ${playerName} has successfully completed
 the MazeMemo challenge!
