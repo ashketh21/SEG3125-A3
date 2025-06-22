@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import GameMenu from './components/GameMenu';
-import MazeGame from './components/MazeGame';
+import GameMenu     from './components/GameMenu';
+import MazeGame     from './components/MazeGame';
 import GameComplete from './components/GameComplete';
 
 function App() {
-  const [appState, setAppState] = useState('menu'); // 'menu', 'playing', 'completed'
-  const [gameConfig, setGameConfig] = useState(null);
-  const [gameStats, setGameStats] = useState(null);
+  const [appState,    setAppState]    = useState('menu');      // 'menu', 'playing', 'completed'
+  const [gameConfig,  setGameConfig]  = useState(null);        // { playerName, difficulty, theme, … }
+  const [gameStats,   setGameStats]   = useState(null);
 
   const handleStartGame = (config) => {
     setGameConfig(config);
@@ -19,9 +19,7 @@ function App() {
   };
 
   const handlePlayAgain = () => {
-    if (gameConfig) {
-      setAppState('playing');
-    }
+    if (gameConfig) setAppState('playing');
   };
 
   const handleReturnToMenu = () => {
@@ -35,7 +33,7 @@ function App() {
       {appState === 'menu' && (
         <GameMenu onStartGame={handleStartGame} />
       )}
-      
+
       {appState === 'playing' && gameConfig && (
         <MazeGame
           config={gameConfig}
@@ -43,12 +41,13 @@ function App() {
           onReturnToMenu={handleReturnToMenu}
         />
       )}
-      
+
       {appState === 'completed' && gameStats && gameConfig && (
         <GameComplete
           stats={gameStats}
           difficulty={gameConfig.difficulty}
           theme={gameConfig.theme}
+          playerName={gameConfig.playerName}       // ← pass the name here!
           onPlayAgain={handlePlayAgain}
           onReturnToMenu={handleReturnToMenu}
         />

@@ -54,7 +54,17 @@ const GameMenu = ({ onStartGame }) => {
   return (
     <div className="min-h-screen bg-blue-100 flex items-center justify-center p-4">
       <div className="max-w-2xl w-full bg-white rounded-lg shadow-lg p-8 space-y-6">
-        {/* Player Name */}
+        
+        {/* — Title Block — */}
+        <div className="text-center mb-8">
+          <h1 className="text-4xl font-bold text-gray-800 mb-2">MazeMemo</h1>
+          <p className="text-gray-600">Welcome To The Best Spatial Memory Challenge</p>
+          <p className="text-sm text-gray-500 mt-2">
+            Memorize the maze, then navigate, do not hit the transparent walls!
+          </p>
+        </div>
+
+        {/* — Player Name Input — */}
         <div>
           <h3 className="text-lg font-semibold text-gray-700 mb-2">Player Name</h3>
           <input
@@ -66,7 +76,7 @@ const GameMenu = ({ onStartGame }) => {
           />
         </div>
 
-        {/* Difficulty */}
+        {/* — Difficulty — */}
         <div>
           <h3 className="text-lg font-semibold text-gray-700 mb-3">Difficulty Level</h3>
           <div className="space-y-2">
@@ -89,7 +99,7 @@ const GameMenu = ({ onStartGame }) => {
           </div>
         </div>
 
-        {/* Theme */}
+        {/* — Theme — */}
         <div>
           <h3 className="text-lg font-semibold text-gray-700 mb-3">Theme</h3>
           <div className="grid grid-cols-3 gap-2">
@@ -110,7 +120,7 @@ const GameMenu = ({ onStartGame }) => {
           </div>
         </div>
 
-        {/* Game Mode */}
+        {/* — Game Mode — */}
         <div>
           <h3 className="text-lg font-semibold text-gray-700 mb-3">Game Mode</h3>
           <div className="flex gap-2">
@@ -140,7 +150,7 @@ const GameMenu = ({ onStartGame }) => {
           )}
         </div>
 
-        {/* Hints */}
+        {/* — Hints — */}
         <div>
           <h3 className="text-lg font-semibold text-gray-700 mb-3">Hints</h3>
           <button
@@ -156,7 +166,7 @@ const GameMenu = ({ onStartGame }) => {
           <p className="text-sm text-gray-500 mt-1">Show your last 3 moves as breadcrumbs</p>
         </div>
 
-        {/* Start Button */}
+        {/* — Start Button — */}
         <div className="text-center">
           <button
             onClick={handleStartGame}
