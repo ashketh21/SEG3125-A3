@@ -1,7 +1,14 @@
 import React from 'react';
 import Certificate from './Certificate';
 
-const GameComplete = ({ stats, difficulty, theme, onPlayAgain, onReturnToMenu }) => {
+const GameComplete = ({
+  stats,
+  difficulty,
+  theme,
+  playerName = 'Player',
+  onPlayAgain,
+  onReturnToMenu
+}) => {
   const formatTime = (seconds) => {
     const mins = Math.floor(seconds / 60);
     const secs = seconds % 60;
@@ -10,7 +17,7 @@ const GameComplete = ({ stats, difficulty, theme, onPlayAgain, onReturnToMenu })
 
   const getPerformanceRating = () => {
     if (!stats.completed) {
-      return { rating: 'Try Again', color: 'text-red-500', message: 'Don\'t give up! Practice makes perfect.' };
+      return { rating: 'Try Again', color: 'text-red-500', message: "Don't give up! Practice makes perfect." };
     }
 
     const timeScore = stats.timeElapsed;
@@ -116,7 +123,7 @@ const GameComplete = ({ stats, difficulty, theme, onPlayAgain, onReturnToMenu })
             stats={stats}
             difficulty={difficulty}
             theme={theme}
-            playerName="Maze Master"
+            playerName={playerName}
           />
         </div>
 
