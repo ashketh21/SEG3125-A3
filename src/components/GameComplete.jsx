@@ -1,5 +1,4 @@
 import React from 'react';
-import Certificate from './Certificate';
 
 const GameComplete = ({
   stats,
@@ -115,16 +114,6 @@ const GameComplete = ({
               <p className="text-2xl font-bold capitalize">{difficulty}</p>
             </div>
           </div>
-        </div>
-
-        {/* Certificate */}
-        <div className="mb-8">
-          <Certificate
-            stats={stats}
-            difficulty={difficulty}
-            theme={theme}
-            playerName={playerName}
-          />
         </div>
 
         {/* Action Buttons */}
