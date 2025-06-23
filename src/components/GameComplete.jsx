@@ -88,7 +88,7 @@ const GameComplete = ({
           <div className="w-24 h-24 mx-auto mb-6 bg-yellow-500 rounded-full flex items-center justify-center">
             <span className="text-white text-3xl">🏆</span>
           </div>
-          <h1 className="text-5xl font-bold text-gray-800 mb-4">Congratulations!</h1>
+          <h1 className="text-5xl font-bold text-gray-800 mb-4">Congratulations, {playerName}!</h1>
           <p className="text-2xl text-gray-600 mb-2">You've mastered the MazeMemo challenge!</p>
           <p className={`text-3xl font-bold ${performance.color} mb-4`}>{performance.rating}</p>
           <p className="text-lg text-gray-500">{performance.message}</p>
